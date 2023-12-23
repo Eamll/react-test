@@ -15,6 +15,14 @@ const SolicitudTarjetas = () => {
 
     const handleSolicitud = () => {
         addTarjeta(tarjetaState);
+        setTarjetaState({
+            nombre: '',
+            documentoDeIdentidad: '',
+            correoElectronico: '',
+            telefono: '',
+            montoTarjetaAprobado: 0
+
+        });
     };
     return (
         <>

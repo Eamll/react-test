@@ -1,12 +1,13 @@
-import { Box, Typography, List, ListItem, ListItemText } from '@mui/material';
+import { Box, Typography, List, ListItem, ListItemText, IconButton } from '@mui/material';
 import Sidebar from '../components/Sidebar'
 import TarjetaContext from '../context/TarjetaContext';
 import { useContext } from 'react';
-import IconButton from '@mui/material/IconButton';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ThumbDownIcon from '@mui/icons-material/ThumbDown';
+
 const TarjetasSolicitadas = () => {
-    const { tarjetas } = useContext(TarjetaContext);
+    const { tarjetas, setTarjetas, setTarjetasAprobadas } = useContext(TarjetaContext);
+
     return (
         <>
             <Box sx={{ display: 'flex' }}>
@@ -17,9 +18,15 @@ const TarjetasSolicitadas = () => {
                         {tarjetas.map((tarjeta, index) => (
                             <ListItem key={index} disableGutters>
                                 <ListItemText primary={'Cliente: ' + tarjeta.nombre} secondary={`Telefono: ${tarjeta.telefono}`} />
-                                <IconButton aria-label="delete">
+                                <IconButton aria-label="approve" onClick={() => {
+                                    setTarjetas(prevTarjetas => prevTarjetas.filter(card => card !== tarjeta));
+                                    setTarjetasAprobadas(prevTarjetas => [...prevTarjetas, tarjeta]);
+                                }}>
                                     <CheckCircleIcon />
-                                </IconButton><IconButton aria-label="delete">
+                                </IconButton>
+                                <IconButton aria-label="disapprove" onClick={() => {
+                                    setTarjetas(prevTarjetas => prevTarjetas.filter(card => card !== tarjeta));
+                                }}>
                                     <ThumbDownIcon />
                                 </IconButton>
                             </ListItem>

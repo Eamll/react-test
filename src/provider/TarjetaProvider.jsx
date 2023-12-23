@@ -12,13 +12,14 @@ const TarjetaProvider = ({ children }) => {
     });
 
     const [tarjetas, setTarjetas] = useState([]);
+    const [tarjetasAprobadas, setTarjetasAprobadas] = useState([]);
 
     const addTarjeta = tarjeta => {
         setTarjetas([...tarjetas, tarjeta]);
     };
 
     return (
-        <TarjetaContext.Provider value={{ tarjetaState, setTarjetaState, tarjetas, addTarjeta }}>
+        <TarjetaContext.Provider value={{ tarjetaState, setTarjetaState, setTarjetas, tarjetas, addTarjeta, tarjetasAprobadas, setTarjetasAprobadas }}>
             {children}
         </TarjetaContext.Provider>
     );

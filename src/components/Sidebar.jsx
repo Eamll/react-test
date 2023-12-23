@@ -113,6 +113,7 @@ export default function Sidebar() {
             <CssBaseline />
             <AppBar position="fixed" open={open}>
                 <Toolbar>
+
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -125,6 +126,8 @@ export default function Sidebar() {
                     >
                         <MenuIcon />
                     </IconButton>
+
+                    <img src="src/assets/logo.png" alt="logo" width="50px" height="50px" />
                     <Typography variant="h6" noWrap component="div">
                         Banco Credit Suisse
                     </Typography>

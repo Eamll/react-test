@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import TarjetaContext from '../context/TarjetaContext';
 
 const SolicitudTarjetas = () => {
-    const [tarjetaState, setTarjetaState] = useContext(TarjetaContext);
+    const { tarjetaState, setTarjetaState, addTarjeta } = useContext(TarjetaContext);
 
     const handleInputChange = (event) => {
         setTarjetaState({
@@ -14,15 +14,14 @@ const SolicitudTarjetas = () => {
     };
 
     const handleSolicitud = () => {
-        console.log(tarjetaState);
+        addTarjeta(tarjetaState);
     };
-
     return (
         <>
             <Box sx={{ display: 'flex' }}>
                 <Sidebar />
                 <Box component="main" sx={{ flexGrow: 1, p: 3, marginTop: "55px" }}>
-                    <Typography variant='h4' sx={{ marginBottom: '25px' }}>SolicitudTarjetas</Typography>
+                    <Typography variant='h4' sx={{ marginBottom: '25px' }}>Solicitud Tarjetas</Typography>
                     <Grid container direction="column" spacing={2}>
                         <Grid item>
                             <TextField id="nombre" label="Nombre" variant="outlined" value={tarjetaState.nombre} onChange={handleInputChange} />
@@ -45,6 +44,8 @@ const SolicitudTarjetas = () => {
                     </Grid>
                 </Box>
             </Box>
+
+
         </>
     )
 }

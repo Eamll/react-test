@@ -1,9 +1,9 @@
-import { Box, Typography, List, ListItem, ListItemText, IconButton } from '@mui/material';
-import Sidebar from '../components/Sidebar'
-import TarjetaContext from '../context/TarjetaContext';
-import { useContext } from 'react';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ThumbDownIcon from '@mui/icons-material/ThumbDown';
+import { Box, IconButton, List, ListItem, ListItemText, Typography } from '@mui/material';
+import { useContext } from 'react';
+import Sidebar from '../components/Sidebar';
+import TarjetaContext from '../context/TarjetaContext';
 
 const TarjetasSolicitadas = () => {
     const { tarjetas, setTarjetas, setTarjetasAprobadas } = useContext(TarjetaContext);

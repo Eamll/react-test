@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material';
-import Sidebar from '../components/Sidebar'
-import TarjetaContext from '../context/TarjetaContext';
-import { useContext } from 'react';
 import { DataGrid, } from '@mui/x-data-grid';
+import { useContext } from 'react';
+import Sidebar from '../components/Sidebar';
+import TarjetaContext from '../context/TarjetaContext';
 
 const TarjetasAprobadas = () => {
     const { tarjetasAprobadas, setTarjetasAprobadas } = useContext(TarjetaContext);

@@ -1,14 +1,14 @@
-import TarjetasAprobadas from "./pages/TarjetasAprobadas";
-import TarjetasSolicitadas from "./pages/TarjetasSolicitadas";
-import SolicitudTarjetas from "./pages/SolicitudTarjetas"
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from "@emotion/react";
-import theme from "./config/theme";
-import TarjetaProvider from "./provider/TarjetaProvider";
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import theme from "./config/theme";
+import SolicitudTarjetas from "./pages/SolicitudTarjetas";
+import TarjetasAprobadas from "./pages/TarjetasAprobadas";
+import TarjetasSolicitadas from "./pages/TarjetasSolicitadas";
+import TarjetaProvider from "./provider/TarjetaProvider";
 
 function App() {
 

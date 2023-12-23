@@ -1,6 +1,6 @@
-import { Box, Typography, TextField, Grid, Button } from '@mui/material';
-import Sidebar from '../components/Sidebar';
+import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 import { useContext } from 'react';
+import Sidebar from '../components/Sidebar';
 import TarjetaContext from '../context/TarjetaContext';
 
 const SolicitudTarjetas = () => {
@@ -44,8 +44,6 @@ const SolicitudTarjetas = () => {
                     </Grid>
                 </Box>
             </Box>
-
-
         </>
     )
 }

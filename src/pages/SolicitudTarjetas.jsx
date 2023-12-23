@@ -21,7 +21,6 @@ const SolicitudTarjetas = () => {
             correoElectronico: '',
             telefono: '',
             montoTarjetaAprobado: 0
-
         });
     };
     return (

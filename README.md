@@ -1,3 +1,7 @@
+# Notas:
+
+Hacer doble click dentro de una celda para editar el valor de el monto de tarjeta aprobado en la pantalla de tarjetas aprobadas.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

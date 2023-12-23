@@ -126,7 +126,7 @@ export default function Sidebar() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
-                        Material UI Dashboard
+                        Banco Credit Suisse
                     </Typography>
                 </Toolbar>
             </AppBar>
